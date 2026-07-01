@@ -1,0 +1,90 @@
+# ============================================================
+# 実データ（絶対コミット禁止 — NII IDR ライセンスデータ）
+# ============================================================
+data/
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.fbn
+*.fbx
+*.ain
+*.aih
+*.atx
+*.ixs
+*.mxs
+*.qpj
+*.qmd
+*.gpkg
+*.geojson
+*.gdb/
+*.mdb
+
+# ============================================================
+# 出力・中間ファイル
+# outputs/ は一部公開（PNG・CSV・JS・PPTXは含める）
+# ============================================================
+outputs/lgbm_model.pkl
+outputs/node_modules/
+outputs/package.json
+outputs/package-lock.json
+outputs/*.html
+outputs/~$*
+outputs/*.zip
+outputs/make_slide*.js
+outputs/research_overview*
+outputs/research_slide*
+*.parquet
+*.feather
+*.arrow
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.env
+.venv
+venv/
+env/
+pip-log.txt
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================
+# 大容量ファイル全般
+# ============================================================
+*.tsv
+*.zip
+*.tar.gz
+*.7z
+*.gz
+
+# ============================================================
+# OS / IDE / ツール
+# ============================================================
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+.claude/
+.pytest_cache/
