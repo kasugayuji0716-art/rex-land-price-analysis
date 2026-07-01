@@ -128,8 +128,8 @@ const bar = (s, color) => rect(s, 0, 0, 0.09, 5.625, color, color);
     "「コロナ」をフィルターとして活用し、\n構造的上昇地域とその要因を空間統計で識別する。\n合わせて構造的下落地域との格差を可視化する。",
     0.4, 4.64, 5.0, 0.65, { fontSize: 11, color: C.white });
 
-  s.addImage({ path: IMG("map_price.png"), x: 5.75, y: 0.62, w: 4.0, h: 4.75 });
-  txt(s, "2022年 全国路線価分布", 5.75, 5.3, 4.0, 0.22,
+  s.addImage({ path: IMG("map_price.png"), x: 5.75, y: 0.62, w: 4.0, h: 4.16 });
+  txt(s, "2022年 全国路線価分布", 5.75, 4.84, 4.0, 0.22,
     { fontSize: 9, color: C.gray, align: "center" });
 })();
 
@@ -206,9 +206,9 @@ const bar = (s, color) => rect(s, 0, 0, 0.09, 5.625, color, color);
   txt(s, context, 0.3, 0.43, 9.4, 0.28,
     { fontSize: 11, color: C.gold, italic: true });
 
-  // 左右2枚並置: AR=1.25(10×8)なら w=4.6, h=3.68
-  const imgW = 4.6, imgH = 3.68;
-  [[left, 0.15], [right, 5.25]].forEach(([side, x]) => {
+  // 左右2枚並置: 実AR=0.717(525x732) → w=3.1, h=4.3、中央揃え
+  const imgW = 3.1, imgH = 4.3;
+  [[left, 1.65], [right, 5.25]].forEach(([side, x]) => {
     const lc = side.color === "C.blue" ? C.blue
              : side.color === "C.red"  ? C.red
              : C.gold;
@@ -305,8 +305,8 @@ const bar = (s, color) => rect(s, 0, 0, 0.09, 5.625, color, color);
   txt(s, "「コロナ禍の変化率」を目的変数にした機械学習で、耐性を高める特徴を定量化",
     0.35, 0.52, 9.2, 0.26, { fontSize: 11, color: C.gray, italic: true });
 
-  // SHAP Beeswarm 画像（figsize=10×7, AR=1.43）
-  s.addImage({ path: IMG("shap_covid_shock.png"), x: 0.12, y: 0.82, w: 5.7, h: 3.99 });
+  // SHAP Beeswarm 画像（実AR=1.086）
+  s.addImage({ path: IMG("shap_covid_shock.png"), x: 0.12, y: 0.82, w: 4.56, h: 4.2 });
 
   // 右パネル: 主要知見
   rect(s, 6.05, 0.82, 3.75, 0.5, C.navy, C.navy, { rounding: 0.04 });
@@ -345,7 +345,7 @@ const bar = (s, color) => rect(s, 0, 0, 0.09, 5.625, color, color);
   txt(s, "赤 = コロナ起因の下落が多い地域　　青 = コロナ前からの構造的下落が多い地域",
     0.35, 0.6, 9.2, 0.3, { fontSize: 12, color: C.navy });
 
-  s.addImage({ path: IMG("corona_road_type_map.png"), x: 1.2, y: 0.92, w: 7.6, h: 4.4 });
+  s.addImage({ path: IMG("corona_road_type_map.png"), x: 3.2, y: 0.92, w: 3.61, h: 4.5 });
 })();
 
 // ════════════════════════════════════════════════════════════════════════
@@ -360,7 +360,7 @@ const bar = (s, color) => rect(s, 0, 0, 0.09, 5.625, color, color);
   txt(s, "全4期間（2018〜2022）を通じてずっと上昇 / ずっと下落だった路線", 0.3, 0.52, 9.4, 0.28,
     { fontSize: 12, color: C.gold });
 
-  s.addImage({ path: IMG("corona_always_trend.png"), x: 0.2, y: 0.85, w: 5.6, h: 4.65 });
+  s.addImage({ path: IMG("corona_always_trend.png"), x: 0.2, y: 0.85, w: 3.58, h: 4.65 });
 
   txt(s, "▲ 構造的上昇（投資注目）", 5.95, 0.88, 3.9, 0.3, { fontSize: 12, bold: true, color: C.red });
   const upList = [
